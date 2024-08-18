@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- audio -->
+     <audio id="buttonSound">
+        <source src="./buttonclick.mp3" type="audio/mpeg">
+     </audio>
+     
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result">
+        </div>
+        <!-- toggle button for theme buttonnn -->
+         <div class="theme-switch">
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="theme-toggle-label"></label>
+         </div>
+         <!-- BUTTONS -->
+          <div class="keys">
+            <button onclick="backSpace()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
+                  </svg>
+            </button>
+            
+            <button onclick="ClearResult()">AC</button>
+            <button onclick="appendResult('%')">%</button>
+            <button onclick="appendResult('/')">/</button>
+            <button onclick="appendResult('7')">7</button>
+            <button onclick="appendResult('8')">8</button>
+            <button onclick="appendResult('9')">9</button>
+            <button onclick="appendResult('*')">*</button>
+            <button onclick="appendResult('4')">4</button>
+            <button onclick="appendResult('5')">5</button>
+            <button onclick="appendResult('6')">6</button>
+            <button onclick="appendResult('-')">-</button>
+            <button onclick="appendResult('1')">1</button>
+            <button onclick="appendResult('2')">2</button>
+            <button onclick="appendResult('3')">3</button>
+            <button onclick="appendResult('+')">+</button>
+            <button onclick="appendResult('0')">0</button>
+            <button onclick="appendResult('.')">.</button>
+            <button class="equalBtn" onclick="calculate()">=</button>
+          </div>
+    </div>
+    <script src="./script.js">
+
+    </script>
+</body>
+</html>
